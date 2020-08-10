@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: order-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: order-service
+    spec:
+      containers:
+      - name: order-service
+        image: prav1234567/order-service:0.0.1-Snapshot
+        ports:
+        - containerPort: 19091

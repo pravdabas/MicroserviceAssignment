@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: user-order-service
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: user-order-service
+    spec:
+      containers:
+      - name: user-order-service
+        image: prav1234567/user-order-service:0.0.1-Snapshot
+        ports:
+        - containerPort: 9090
